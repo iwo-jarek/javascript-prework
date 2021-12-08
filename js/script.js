@@ -1,11 +1,9 @@
-function playGame(playerInput){
+
+const playGame = function (playerInput){
   clearMessages();
   
-  let randomNumber = Math.floor(Math.random() * 3 + 1);
-  //let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
- // console.log('Gracz wpisał: ' + playerInput);
-
-  //let computerMove = getMoveName(argMoveId);
+const randomNumber = Math.floor(Math.random() * 3 + 1);
+ 
 
   function getMoveName(argMoveId){
     console.log('wywołano getMoveName ');
@@ -47,23 +45,28 @@ function playGame(playerInput){
 
   displayResult(getMoveName(randomNumber), getMoveName(playerInput));
 }
-  let playRock = document.getElementById('play-rock');
+  
+const playRock = document.getElementById('play-rock');
   playRock.addEventListener('click', function(){
     playGame('1')
-  });
-  let playPaper = document.getElementById('play-paper');
+});
+const playPaper = document.getElementById('play-paper');
   playPaper.addEventListener('click', function(){
     playGame('2')
-  });
-  let playScissors = document.getElementById('play-scissors');
+});
+const playScissors = document.getElementById('play-scissors');
   playScissors.addEventListener('click', function(){
     playGame('3')
-  });
+});
 
 
 
-//playGame(3);
 
+
+
+//let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+// console.log('Gracz wpisał: ' + playerInput);
+//let computerMove = getMoveName(argMoveId);
 
 /*
 if(randomNumber == 1){
@@ -76,9 +79,6 @@ if(randomNumber == 1){
 
 printMessage('Mój ruch to: ' + computerMove);
 */
-
-
-
 
 /*
 if(playerInput == '1'){
@@ -126,4 +126,5 @@ if( computerMove == 'papier' && playerMove == 'papier'){
   function(){
     printMessage('Guzik został kliknięty');
   }
-);*/
+);
+*/
