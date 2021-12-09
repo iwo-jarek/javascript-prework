@@ -1,11 +1,13 @@
 
-const playGame = function (playerInput){
+const playGame = function(playerInput) {
   clearMessages();
   
 const randomNumber = Math.floor(Math.random() * 3 + 1);
  
 
-  function getMoveName(argMoveId){
+
+
+const getMoveName = function (argMoveId) {
     console.log('wywołano getMoveName ');
     console.log ('argument: ' + argMoveId);
       if(argMoveId == 1){
@@ -19,11 +21,11 @@ const randomNumber = Math.floor(Math.random() * 3 + 1);
         return 'nieznany ruch';
       } 
   }
-
   getMoveName(playerInput) //ruch gracza
   getMoveName(randomNumber) //ruch komputera
+ 
 
-  function displayResult(argComputerMove, argPlayerMove){
+  const displayResult = function (argComputerMove, argPlayerMove){
     console.log('moves:', argComputerMove, argPlayerMove);
     console.log('wywołano displayResult ');
     console.log('argumenty: ' + argComputerMove + ',' + argPlayerMove);
@@ -43,8 +45,9 @@ const randomNumber = Math.floor(Math.random() * 3 + 1);
 
   }
 
-  displayResult(getMoveName(randomNumber), getMoveName(playerInput));
-}
+displayResult(getMoveName(randomNumber), getMoveName(playerInput));
+} 
+
   
 const playRock = document.getElementById('play-rock');
   playRock.addEventListener('click', function(){
